@@ -1,0 +1,49 @@
+package clase;
+import java.util.ArrayList;
+
+public class Clase 
+{
+   
+    //METODO PARA DAR A CONOCER EL TAMAÑO DE LAS PALABRAS O "CONTARLAS"
+    //ESTE METODO ES PARA LA COMPRAACION DE LOS ARREGLOS 
+       public void comparacion(String palabra1[], String palabra2[]) 
+    { 
+        ArrayList<String> C = new ArrayList<>();
+        
+        for (int i = 0; i < palabra1.length; i++) //PALABRA ARCHIVO
+        {
+            for (int j = 0; j < palabra2.length; j++) //PALABRAS ORDENADAS
+            {
+                if (palabra1[i].equals(palabra2[j]))
+                {
+                    C.add(palabra1[i]);
+                }
+            }
+        }
+        
+        String R[] = new String[C.size()];
+        for (int i = 0; i < C.size(); i++)
+        {
+            R[i] = C.get(i);
+        }
+        
+        Mostrar(R);
+    }
+
+        //METODO PARA MOSTRAR PALABRAS
+         public void Mostrar(String con[])
+    {
+            System.out.println();
+            
+               for (int i = 0; i < con.length; i++) 
+                 {
+                    if (con[i] != null) 
+                   {
+                      System.out.println("[" + i + "] " + con[i]);
+
+                   }
+                 }
+               System.out.print("--------------------");
+    }
+    
+}
